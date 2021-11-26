@@ -2,23 +2,21 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    height: 49,
-    borderRadius: 4
-  },
-  normal: {
-    backgroundColor: '#ED5353',
-    color: '#fff',
-  },
-  inverted: {
-    backgroundColor: '#fff', 
-    color: '#ED5353',
+    borderRadius: 4,
+    marginBottom: 10
   },
   title: {
-    fontSize: '14px',
+    fontSize: '18px',
+    width: '100%',
+    backgroundColor: '#f5f5f5', 
+    height: 40,
+    paddingLeft: 10
   },
+  color: {
+    color: '#303030'
+  }
  });
 
 export default styles

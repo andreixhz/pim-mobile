@@ -7,9 +7,8 @@ function Input({title,type}) {
     return(
         <View
          style={[styles.container,styles[type] ]}>
-            <Text style={[styles.title,styles[type]]}>{title}</Text>
+            <Text>{title}</Text>
             <TextInput style={[styles.title,styles[type]]}/>
-            <Text style={[styles.title,styles[type]]}>{title}</Text>
         </View>
     )
 }
