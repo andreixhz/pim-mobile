@@ -13,12 +13,12 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   inverted: {
-    backgroundColor: '#fff', 
+    backgroundColor: '#fff',
     color: '#ED5353',
   },
   title: {
-    fontSize: '14px',
+    fontSize: 14,
   },
- });
+});
 
 export default styles

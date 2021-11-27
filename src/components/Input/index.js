@@ -1,14 +1,14 @@
 import React from 'react'
-import {View, TextInput, Text} from 'react-native'
+import { View, TextInput, Text } from 'react-native'
 import styles from './styles'
 
-function Input({title,type}) {
+function Input({ title, type }) {
 
-    return(
+    return (
         <View
-         style={[styles.container,styles[type] ]}>
+            style={[styles.container, styles[type]]}>
             <Text>{title}</Text>
-            <TextInput style={[styles.title,styles[type]]}/>
+            <TextInput style={[styles.title, styles[type]]} />
         </View>
     )
 }

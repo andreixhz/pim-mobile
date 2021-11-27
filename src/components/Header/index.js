@@ -1,21 +1,23 @@
-import React, { Component } from 'react'
-import { Dimensions, Image, StyleSheet, View } from 'react-native'
-import image from '../../assets/Topo.png'
-
+import React from 'react'
+import { Dimensions, Image, Platform, StyleSheet, Text, View } from 'react-native'
+// import logo from ''
 const dimensions = Dimensions.get('window');
-const imageHeight = Math.round(dimensions.width * 9 / 16);
 const imageWidth = dimensions.width;
+import { Constants } from 'expo';
 
 function Header() {
 
-    return(
+    return (
         <View style={styles.content}>
             <View style={styles.actions}>
+                <Text>
+                    {'<'}
+                </Text>
             </View>
             <Image
-                resizeMode="contain" 
-                style={styles.logo} 
-                source={require('../../assets/header-svg.svg')}/>
+                resizeMode="contain"
+                style={styles.logo}
+                source={require('../../assets/header-svg.svg')} />
         </View>
 
     )
@@ -24,20 +26,22 @@ function Header() {
 
 const styles = StyleSheet.create({
     logo: {
-        width: imageWidth,
+        width: 300,
         height: 96,
         marginBottom: -1
     },
     actions: {
         width: imageWidth,
         backgroundColor: '#ED5353',
-        height: 40
+        height: 40,
+        marginTop: Platform.OS === 'ios' ? 0 : (Constants?.statusBarHeight || 0)
     },
     content: {
         backgroundColor: '#ED5353',
         borderBottomColor: '#fff',
-    }
-  });
-  
+    },
+
+});
+
 
 export default Header;
